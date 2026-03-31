@@ -1,12 +1,16 @@
+//Obtenemos los datos del DOM
 const formulario = document.getElementById("formulario");
 const lista = document.getElementById("listaTareas");
 const contador = document.getElementById("contadorPendientes");
 
+//Variables
 let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
 let editando = null;
 
+//Se muestran las tareas
 mostrarTareas();
 
+//Se captura el envío del formulario
 formulario.addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -24,6 +28,7 @@ formulario.addEventListener("submit", function(event){
 
     const mensaje = document.getElementById("mensajeExito");
 
+    //Validaciones
     if (titulo === "") {
         errorTitulo.textContent = "El título es obligatorio.";
         valido = false;
@@ -82,6 +87,7 @@ formulario.addEventListener("submit", function(event){
             tareas.push(nueva);
         }
 
+        //Guardar las tareas en localStorage
         localStorage.setItem("tareas", JSON.stringify(tareas));
 
         mostrarTareas();
@@ -93,6 +99,7 @@ formulario.addEventListener("submit", function(event){
     }
 });
 
+//Se muestran las tareas en lista
 function mostrarTareas(){
     lista.innerHTML = "";
 
@@ -129,6 +136,7 @@ function mostrarTareas(){
     contador.textContent = "Tareas pendientes: " + pendientes;
 }
 
+//Marcar como tarea comletada
 function completar(id){
     for (let i = 0; i < tareas.length; i++) {
         if (tareas[i].id === id) {
@@ -140,6 +148,7 @@ function completar(id){
     mostrarTareas();
 }
 
+//Eliminar la tarea
 function eliminar(id){
     if (confirm("¿Eliminar tarea?")) {
         let nuevas = [];
@@ -157,6 +166,7 @@ function eliminar(id){
     }
 }
 
+//Editar la Tarea
 function editar(id){
     if (!confirm("¿Editar tarea?")) return;
 

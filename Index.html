@@ -8,22 +8,27 @@
 </head>
 <body>
 
+    <!--Formulario-->
     <h1>Gestor de Tareas Personales</h1>
 
     <form action="" method="post" id="formulario">
 
+        <!--Campo para agregar el Título-->
         <label for="titulo">Titulo</label>
         <input type="text" id="titulo" placeholder="Ingresa el titulo">
         <span id="errorTitulo" class="error"></span>
 
+        <!--Campo para agregar la descripción de la tarea-->
         <label for="descripcion">Descripción</label>
         <input type="text" id="descripcion" placeholder="Ingresa la descripción">
         <span id="errorDescripcion" class="error"></span>
 
+        <!--Campo para agregar la fecha-->
         <label for="fecha">Fecha de vencimiento</label>
         <input type="date" id="fecha">
         <span id="errorFecha" class="error"></span>
 
+        <!--Campo para agregar la prioridad de la tarea-->
         <label for="prioridad">Prioridad</label>
         <select id="prioridad">
             <option value="">Selecciona</option>
@@ -33,11 +38,13 @@
         </select>
         <span id="errorPrioridad" class="error"></span>
 
+        <!--Botón para poder agregar la tarea-->
         <button type="submit" id="btnGuardar">Agregar tarea</button>
         <span id="mensajeExito" class="success"></span>
-
+        
     </form>
 
+    <!--Lista en la que aparecen las tareas-->
     <h2>Lista de tareas</h2>
     <p id="contadorPendientes"></p>
 

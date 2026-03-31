@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/*Fondo y fuente del cuerpo de la página*/
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7fb;
@@ -19,6 +20,7 @@ h1{
     margin-bottom: 20px;
 }
 
+/*Estilo del formulario*/
 form{
     max-width: 400px;
     margin: auto;
@@ -28,6 +30,7 @@ form{
     padding: 20px;
 }
 
+/*Campos de entrada*/
 input, select{
     display: block;
     width: 100%;
@@ -37,6 +40,7 @@ input, select{
     border: 1px solid #ccc;
 }
 
+/*Diseño del botón*/
 button{
     background: #3498db;
     color: white;
@@ -52,6 +56,7 @@ button:hover{
     background: #2980b9;
 }
 
+/*Listas de las tareas*/
 ul{
     max-width: 400px;
     margin: 20px auto;
@@ -67,6 +72,7 @@ li{
     margin-bottom: 10px;
 }
 
+/*Botones de las tareas*/
 li button{
     display: inline-block;
     width: auto;
@@ -75,6 +81,7 @@ li button{
     font-size: 14px;
 }
 
+/*Color de las prioridades*/
 .alta{
     border-left: 5px solid #e74c3c;
 }
@@ -87,16 +94,19 @@ li button{
     border-left: 5px solid #2ecc71;
 }
 
+/*Tareas completadas*/
 .completada{
     text-decoration: line-through;
     background: #d4edda;
 }
 
+/*Mesnaje de error*/
 .error{
     color: red;
     font-size: 13px;
 }
 
+/*Mensaje de éxito*/
 .success{
     color: green;
     font-weight: bold;
