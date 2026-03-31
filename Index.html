@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de tareas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1>Gestor de Tareas Personales</h1>
+
+    <form action="" method="post" id="formulario">
+
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" placeholder="Ingresa el titulo">
+        <span id="errorTitulo" class="error"></span>
+
+        <label for="descripcion">Descripción</label>
+        <input type="text" id="descripcion" placeholder="Ingresa la descripción">
+        <span id="errorDescripcion" class="error"></span>
+
+        <label for="fecha">Fecha de vencimiento</label>
+        <input type="date" id="fecha">
+        <span id="errorFecha" class="error"></span>
+
+        <label for="prioridad">Prioridad</label>
+        <select id="prioridad">
+            <option value="">Selecciona</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+        <span id="errorPrioridad" class="error"></span>
+
+        <button type="submit" id="btnGuardar">Agregar tarea</button>
+        <span id="mensajeExito" class="success"></span>
+
+    </form>
+
+    <h2>Lista de tareas</h2>
+    <p id="contadorPendientes"></p>
+
+    <ul id="listaTareas"></ul>
+
+    <script src="validator.js"></script>
+    
+</body>
+</html>
